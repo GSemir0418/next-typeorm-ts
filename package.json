@@ -5,7 +5,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typeorm:build": "babel ./src --out-dir dist --extensions .ts,.tsx",
+    "typeorm:run": "typeorm migration:run",
+    "typeorm:revert": "typeorm migration:revert"
   },
   "dependencies": {
     "@babel/cli": "^7.16.8",
