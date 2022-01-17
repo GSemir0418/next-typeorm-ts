@@ -22,11 +22,17 @@ var _typeorm = require("typeorm");
 var _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3;
 
 // posts表的实体
-var Post = (_dec = (0, _typeorm.Entity)("posts"), _dec2 = (0, _typeorm.PrimaryGeneratedColumn)("increment"), _dec3 = (0, _typeorm.Column)("varchar"), _dec4 = (0, _typeorm.Column)("text"), _dec(_class = (_class2 = function Post() {
+var Post = (_dec = (0, _typeorm.Entity)("posts"), _dec2 = (0, _typeorm.PrimaryGeneratedColumn)("increment"), _dec3 = (0, _typeorm.Column)("varchar"), _dec4 = (0, _typeorm.Column)("text"), _dec(_class = (_class2 = // 自增 主键
+// 类型为varchar的列
+// 类型为text的列
+// Partial的作用在于 不需要将Post的全部属性都传递过来
+function Post(attributes) {
   (0, _classCallCheck2["default"])(this, Post);
   (0, _initializerDefineProperty2["default"])(this, "id", _descriptor, this);
   (0, _initializerDefineProperty2["default"])(this, "title", _descriptor2, this);
   (0, _initializerDefineProperty2["default"])(this, "content", _descriptor3, this);
+  // 将attributes的全部属性放到this上即可
+  Object.assign(this, attributes);
 }, (_descriptor = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "id", [_dec2], {
   configurable: true,
   enumerable: true,
