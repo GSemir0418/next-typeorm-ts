@@ -2,13 +2,13 @@
   "name": "next-typeorm-ts",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev & babel ./src --out-dir dist --extensions .ts,.tsx",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typeorm:build": "babel ./src --out-dir dist --extensions .ts,.tsx",
-    "typeorm:run": "typeorm migration:run",
-    "typeorm:revert": "typeorm migration:revert"
+    "migration:run": "typeorm migration:run",
+    "migration:revert": "typeorm migration:revert",
+    "entity:create": "typeorm entity:create"
   },
   "dependencies": {
     "@babel/cli": "^7.16.8",
