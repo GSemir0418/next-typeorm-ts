@@ -21,6 +21,7 @@
     "typeorm": "^0.2.41"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.16.7",
     "@types/node": "17.0.8",
     "@types/react": "17.0.38",
     "eslint": "8.6.0",
